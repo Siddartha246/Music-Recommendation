@@ -3,18 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather-Based Music Recommendation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather-Based Music Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <nav class="bg-blue-600 p-4 text-white flex justify-between">
-        <h1 class="text-xl font-bold">WeatherTunes</h1>
-        <ul class="flex space-x-4">
-            <li><a href="index.html" class="hover:underline">Home</a></li>
-            <li><a href="about.html" class="hover:underline">About</a></li>
-            <li><a href="how-it-works.html" class="hover:underline">How It Works</a></li>
-            <li><a href="contact.html" class="hover:underline">Contact</a></li>
-        </ul>
-    </nav>
+<body>
+    <header>
+        <div class="logo">WeatherTunes</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">How it Works</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Weather Search Section -->
+        <section class="weather">
+            <h2>Check Your Weather</h2>
+            <input type="text" id="location" placeholder="Enter location">
+            <button onclick="getWeather()">Get Weather</button>
+            <div id="weather-widget">
+                <!-- Weather information will be displayed here -->
+            </div>
+        </section>
+        
+        
+            <div id="music-recommendations">
+                <h2>Music Recommendations</h2>
+                <!-- Recommended songs will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
